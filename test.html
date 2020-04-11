@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recaptcha v3 test</title>
+</head>
+<body>
+    <script src="https://www.google.com/recaptcha/api.js?render=_site_key_here"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('_site_key_here', {action: 'homepage'}).then(function(token) {
+                console.log(token);
+            });
+        });
+    </script>
+</body>
+</html>
